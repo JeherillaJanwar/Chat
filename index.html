@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P2P Decentralized Chat</title>
+    <script src="src/xss.min.js"></script>
+    <script src="src/peerjs.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div id="notification"></div>
+
+    <button
+      id="Show_settings"
+      OnClick="document.getElementById('settings_wrapper').style.display='block';document.getElementById('Show_settings').style.display='none'"
+    >
+      Settings
+    </button>
+
+    <div id="settings_wrapper">
+      <span
+        class="closeSettings"
+        onclick="document.getElementById('settings_wrapper').style.display='none';document.getElementById('Show_settings').style.display='block'"
+        >✖</span
+      >
+      <div class="otherId">
+        <p id="instructions">
+          Enter friends message id to connect to them.
+        </p>
+
+        <input type="text" id="peerIdTxtBox" placeholder="Player ID" />
+
+        <button id="conToPeerBtn" OnClick="ConnectToPeer()">
+          Connect To Peer
+        </button>
+        <div id="error"></div>
+      </div>
+
+      <div class="displaymessageId">
+        <p class="peerId">
+          Your message id:
+          <span id="peerIdDisplay">3vfexizpcu100000</span>
+        </p>
+        <button onclick="copyId()">Copy message ID</button>
+
+        <button id="hideIdBtn" onclick="hideId()">Hide message ID</button>
+        <button onclick="">Change message ID</button>
+      </div>
+    </div>
+
+    <div class="message_area">
+      <h2>Messages</h2>
+      <div id="messages_history" class="messages-wrapper">
+        <div class="message from">
+          Press settings to get started
+        </div>
+      </div>
+      <div class="messageInput">
+        <input type="text" id="messageTextBox" placeholder="Message" />
+
+        <button id="sendMessageBtn" OnClick="SendMessage()">
+          Send Message
+        </button>
+      </div>
+    </div>
+    <!-- <footer>
+      <button OnClick="">
+        Share
+      </button>
+      <button OnClick="">
+        Contact Dev
+      </button>
+    </footer> -->
+    <script src="src/main.js"></script>
+  </body>
+</html>
