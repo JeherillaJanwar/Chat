@@ -113,7 +113,7 @@ function copyId() {
     "Failed to copy link to clipboard";
   navigator.clipboard.writeText(peer_id_number).then(() => {
     document.getElementById("notification").innerHTML =
-      "Copied Game id to clipboard";
+      "Copied Message id to clipboard";
   });
   document.getElementById("notification").style.animation = "nanimation 2s 1";
 
