@@ -99,11 +99,11 @@ function SendMessage() {
 function hideId() {
   if (!isIdHidden) {
     document.getElementById("peerIdDisplay").innerHTML = "●●●●●●●●●●";
-    document.getElementById("hideIdBtn").innerHTML = "Show Game ID";
+    document.getElementById("hideIdBtn").innerHTML = "Show Message ID";
     isIdHidden = true;
   } else {
     document.getElementById("peerIdDisplay").innerHTML = peer_id_number;
-    document.getElementById("hideIdBtn").innerHTML = "Hide Game ID";
+    document.getElementById("hideIdBtn").innerHTML = "Hide Message ID";
     isIdHidden = false;
   }
 }
